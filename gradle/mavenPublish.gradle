@@ -38,7 +38,7 @@ publishing {
             from components.java
             artifact sourcesJar
             artifact javadocJar
-            artifact androidJar
+//            artifact androidJar
             artifact iosJar
             artifact desktopJar
 
