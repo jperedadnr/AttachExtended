@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.yt.impl.AndroidYTService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

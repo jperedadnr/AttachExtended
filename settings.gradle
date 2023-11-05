@@ -1,8 +1,6 @@
 pluginManagement {
     repositories {
-        maven {
-            url 'https://plugins.gradle.org/m2/'
-        }
+        gradlePluginPortal()
         mavenCentral()
     }
 }
@@ -10,5 +8,7 @@ pluginManagement {
 rootProject.name = 'attach-extended'
 
 include 'log'
+include 'yt'
 
 project(':log').projectDir                     = file('modules/log')
+project(':yt').projectDir                      = file('modules/yt')

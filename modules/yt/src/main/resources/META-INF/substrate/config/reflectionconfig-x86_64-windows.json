@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.yt.impl.DesktopYTService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

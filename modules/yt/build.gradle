@@ -1,0 +1,7 @@
+dependencies {
+    implementation "com.gluonhq.attach:util:$libraryVersions.attach"
+    implementation "com.gluonhq.attach:storage:$libraryVersions.attach"
+}
+
+ext.moduleName = 'com.gluonhq.attachextended.yt'
+ext.description = 'Common API to access youtube features'
