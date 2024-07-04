@@ -27,11 +27,11 @@ These are the requisites:
 
 * A recent version of [JDK 11](http://jdk.java.net/11/) or superior
 * Gradle 6.0 or superior. 
-* Attach Util 4.0.12 or superior
+* Attach Util 4.0.20 or superior
 
 To build the iOS Services:
  
-* A Mac with with MacOS X 10.14.4 or superior
+* A Mac with with MacOS X 11 or superior
 * XCode 11.x or superior
 
 To build the Android services:
@@ -54,7 +54,7 @@ If you want to install them, run:
 
 `./gradlew clean publishToMavenLocal`
 
-When the process finishes successfully, the different services can be added to a Gluon Mobile project.
+When the process finishes successfully, the different services can be added to a GluonFX project.
 
 For instance, the Log service for desktop can be added to the project like:
 
@@ -67,18 +67,47 @@ For instance, the Log service for desktop can be added to the project like:
 </repositories>
 
 <!-- dependencies -->
-<dependency>
-    <groupId>com.gluonhq.attachextended</groupId>
-    <artifactId>log</artifactId>
-    <version>4.0.12</version>
-</dependency>
-<dependency>
-    <groupId>com.gluonhq.attachextended</groupId>
-    <artifactId>log</artifactId>
-    <version>4.0.12</version>
-    <classifier>desktop</classifier>
-    <scope>runtime</scope>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>com.gluonhq.attachextended</groupId>
+        <artifactId>log</artifactId>
+        <version>4.0.15</version>
+    </dependency>
+...
+</dependencies>
+
+<!-- profiles -->
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation><activeByDefault>true</activeByDefault></activation>
+        </profile>
+        <dependencies>
+            <dependency>
+                <groupId>com.gluonhq.attachextended</groupId>
+                <artifactId>log</artifactId>
+                <version>4.0.15</version>
+                <classifier>desktop</classifier>
+                <scope>runtime</scope>
+            </dependency>
+        </dependencies>
+        <profile>
+            <id>ios</id>
+            <properties>
+                <gluonfx.target>ios</gluonfx.target>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.gluonhq.attachextended</groupId>
+                    <artifactId>log</artifactId>
+                    <version>4.0.15</version>
+                    <classifier>ios</classifier>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        ...
+    </profiles>
 ```
 
 and used from the project like:

@@ -10,5 +10,7 @@ pluginManagement {
 rootProject.name = 'attach-extended'
 
 include 'log'
+include 'barcode-scan'
 
 project(':log').projectDir                     = file('modules/log')
+project(':barcode-scan').projectDir                 = file('modules/barcode')

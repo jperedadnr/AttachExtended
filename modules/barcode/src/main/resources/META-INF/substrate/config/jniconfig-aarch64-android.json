@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.barcodescan.impl.AndroidBarcodeScanService",
+    "methods":[{"name":"setResult","parameterTypes":["java.lang.String"] }]
+  }
+]
