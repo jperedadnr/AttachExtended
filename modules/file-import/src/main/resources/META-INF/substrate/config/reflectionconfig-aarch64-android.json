@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.fileimport.impl.AndroidFileImportService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

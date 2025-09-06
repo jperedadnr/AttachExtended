@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.fileimport.impl.DesktopFileImportService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

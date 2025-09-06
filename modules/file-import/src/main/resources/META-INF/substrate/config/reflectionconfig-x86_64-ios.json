@@ -1,0 +1,6 @@
+[
+  {
+    "name" : "com.gluonhq.attachextended.fileimport.impl.IOSFileImportService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

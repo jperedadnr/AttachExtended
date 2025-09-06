@@ -10,5 +10,7 @@ pluginManagement {
 rootProject.name = 'attach-extended'
 
 include 'log'
+include 'file-import'
 
 project(':log').projectDir                     = file('modules/log')
+project(':file-import').projectDir             = file('modules/file-import')
